@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mineswheeper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div id="rules">
+        <ul>
+        <li>Click Play to start the game</li>
+        <li>Left-click on a case will reveal it, if it's a mine you will loose</li>
+        <li>Right-click will help you target the cells where you think there's a mine </li>
+        <li>The number on a cell show how many mines there are around it </li>
+        <li>The number of mines is randomized, click play if you want to change it !</li>
+    </ul>
+        <button id="plyBTN" onclick="playGame()">Play</button>
+    </div>
+    <canvas  id="canvasGame" width="600px" height="600px" onclick="getCoordinate(event)" oncontextmenu="signalIt(event)"></canvas>
+    <div id="container2">
+        <h1 id="res" style="text-align: center; padding-top:50px; " >Let's see what you can do &#128521 </h1>
+        <div id="btn">
+            <h3 style="color: whitesmoke">choose the size of the grid</h3>
+        <input type="radio" id="ten" name="gender" value="ten" onclick="setW(60)">
+        <label for="ten">10 &times 10</label><br>
+        <input type="radio" id="fifteen" name="gender" value="fifteen" onclick="setW(40)">
+        <label for="fifteen">15 &times 15</label><br>
+        <input type="radio" id="twenty" name="gender" value="twenty" onclick="setW(30)">
+        <label for="twenty">20 &times 20</label>
+        </div>
+    </div>
+</div>
+<div class="container1">
+<img src="images/mine.png" alt="mie image" id="img" style="display: none">
+<div><img src="images/sign.jpg" alt="sign image" id="img1"><span id="sc" style="font-size:60px">0</span></div>
+</div>
+<script src="js/script.js" ></script>
+</body>
+</html>
