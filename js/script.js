@@ -84,10 +84,12 @@ function getCoordinate(e) {
     console.log(e.clientX + "/" + e.clientY);
     mousex = Math.floor((x-xoffset)/w ) ;
     mousey = Math.floor((y-yoffset)/w);
+ if(!grid[mousex][mousey].signed){
     if(grid[mousex][mousey].mine)
         loose() ;
     else
         reveal(mousex,mousey);
+ }
 }
 
 //reveal function
